@@ -20,7 +20,7 @@ version '3.1'
 
 services:
   backuper:
-    image: mojighahar/db-backup
+    image: gitiserver/db-backup
     environment:
       DURATION: 1d
       DRIVER: postgresql
