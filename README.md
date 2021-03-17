@@ -20,15 +20,15 @@ version '3.1'
 
 services:
   backuper:
-    image: gitiserver/db-backup
+    image: gitiserver/db-backup:1.1
     environment:
       DURATION: 1d
       DRIVER: postgresql
       PGHOST: postgres
       PGPORT 5432
-      PGDATABASE: test
-      PGUSERNAME: test
-      PGPASSWORD: test
+      PGDATABASE: foo
+      PGUSERNAME: bar
+      PGPASSWORD: changeme
       COUNT: 5
     volumes:
       - "backups:/var/scripts/backup/backups"
@@ -36,9 +36,10 @@ services:
   db:
     image: postgres 
     environment:
-      - POSTGRES_DB=test
-      - POSTGRES_USER=test
-      - POSTGRES_PASSWORD=test
+      POSTGRES_DB: foo
+      POSTGRES_USER: bar
+      POSTGRES_PASSWORD: changeme
+
 volumes:
   backups:
 
