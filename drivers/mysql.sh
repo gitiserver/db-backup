@@ -6,6 +6,6 @@ PATH=$(pwd)/backups/$FILENAME
 
 echo "backuping $FILENAME ..."
 
-/bin/mysqldump -h "$DB_HOST" -P "$DB_PORT" -u "$MDUSERNAME" -p "$MDPASSWORD" "$DB_DATABASE" > "$PATH"
+/bin/mysqldump -h "$DB_HOST" -P "$DB_PORT" -u "$DB_USERNAME" -p "$DB_PASSWORD" "$DB_DATABASE" > "$PATH"
 
 echo "backup $FILENAME finished"
