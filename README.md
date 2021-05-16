@@ -13,6 +13,7 @@ This script until now just work for **mongodb** and **postgresql** databases.
 | DB_USERNAME | Usename of database |
 | DB_PASSWORD | Password of db user |
 | COUNT | Number of last backup that must be saved to volume. if number become longer than this value the first created backup file will be removed |
+| MDAUTHDB | authentication Database just use for mongodb |
 
 ## Sample Docker-Compose file
 ```
