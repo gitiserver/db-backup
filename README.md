@@ -8,7 +8,7 @@ This script until now just work for **mongodb** and **postgresql** databases.
 | DURATION | Linux `sleep` time format |
 | DRIVER | Type of your database. `mongodb` or `postgresql` |
 | DB_HOST | Hostname or IP address of database |
-| PGPORT | default gateway of local network |
+| DB_PORT | default gateway of local network |
 | DB_DATABASE | Database name |
 | DB_USERNAME | Usename of database |
 | DB_PASSWORD | Password of db user |
