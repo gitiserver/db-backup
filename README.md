@@ -1,19 +1,19 @@
 # Database Backuper docker image
 ‌Backup Databases Regularly.
-This script until now just work for **mongodb** and **postgresql** databases.
+Works for **mongodb**, **postgresql**, **mysql** databases.
 
 ## Enviroments
 | Variable   |   Description      |
 |----------|:-------------:|
 | DURATION | Linux `sleep` time format |
-| DRIVER | Type of your database. `mongodb` or `postgresql` |
+| DRIVER | Type of your database. `mongodb` or `postgresql` or `mysql` |
 | DB_HOST | Hostname or IP address of database |
-| DB_PORT | default gateway of local network |
+| DB_PORT | Default gateway of local network |
 | DB_DATABASE | Database name |
 | DB_USERNAME | Usename of database |
 | DB_PASSWORD | Password of db user |
 | COUNT | Number of last backup that must be saved to volume. if number become longer than this value the first created backup file will be removed |
-| MDAUTHDB | authentication Database just use for `mongodb` |
+| MDAUTHDB | Authentication Database just use for `mongodb` |
 
 ## Sample Docker-Compose file
 ```
