@@ -7,12 +7,13 @@ This script until now just work for **mongodb** and **postgresql** databases.
 |----------|:-------------:|
 | DURATION | Linux `sleep` time format |
 | DRIVER | Type of your database. `mongodb` or `postgresql` |
-| PGHOST | Hostname or IP address of database |
-| PGPORT | default gateway of local network |
-| PGDATABASE | Database name |
-| PGUSERNAME | Usename of database |
-| PGPASSWORD | Password of db user |
+| DB_HOST | Hostname or IP address of database |
+| DB_PORT | default gateway of local network |
+| DB_DATABASE | Database name |
+| DB_USERNAME | Usename of database |
+| DB_PASSWORD | Password of db user |
 | COUNT | Number of last backup that must be saved to volume. if number become longer than this value the first created backup file will be removed |
+| MDAUTHDB | authentication Database just use for mongodb |
 
 ## Sample Docker-Compose file
 ```
@@ -24,11 +25,11 @@ services:
     environment:
       DURATION: 1d
       DRIVER: postgresql
-      PGHOST: postgres
-      PGPORT 5432
-      PGDATABASE: foo
-      PGUSERNAME: bar
-      PGPASSWORD: changeme
+      DB_HOST: postgres
+      DB_PORT 5432
+      DB_DATABASE: foo
+      DB_USERNAME: bar
+      DB_PASSWORD: changeme
       COUNT: 5
     volumes:
       - "backups:/var/scripts/backup/backups"
