@@ -27,7 +27,7 @@ services:
       DURATION: 1d
       DRIVER: postgresql
       DB_HOST: postgres
-      DB_PORT 5432
+      DB_PORT: 5432
       DB_DATABASE: foo
       DB_USERNAME: bar
       DB_PASSWORD: changeme
