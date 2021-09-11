@@ -22,7 +22,7 @@ version '3.1'
 services:
 
   backuper:
-    image: gitiserver/db-backup:2.2
+    image: gitiserver/db-backup:2.3
     environment:
       DURATION: 1d
       DRIVER: postgresql
